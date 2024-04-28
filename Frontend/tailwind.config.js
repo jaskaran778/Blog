@@ -8,5 +8,5 @@ export default {
     theme: {
         extend: {},
     },
-    plugins: [flowbite.plugin(), scrollBar, lineClamp],
+    plugins: [flowbite.plugin(), scrollBar],
 };
