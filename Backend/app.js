@@ -10,10 +10,12 @@ const dotenv = require("dotenv").config({
     path: path.resolve(__dirname, "../.env"),
 });
 const app = Express();
+const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT;
 app.use(Express.json());
 app.use(cookieParser());
+app.use(cors());
 Mongoose.connect(process.env.MONGO)
     .then(() => {
         console.log("MongoDB is Connected".underline.blue);
