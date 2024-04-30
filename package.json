@@ -4,7 +4,6 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend"
   },
   "keywords": [],
   "author": "Jaskaran Singh",
