@@ -15,20 +15,7 @@ const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT;
 app.use(Express.json());
 app.use(cookieParser());
-app.use(
-    cors({
-        origin: (origin, callback) => {
-            if (allowedOrigins.includes(origin)) {
-                console.log(origin, allowedOrigins);
-                callback(null, true);
-            } else {
-                callback(new Error("Not allowed by CORS"));
-            }
-        },
-        credentials: true,
-        methods: ["GET", "POST", "PUT", "DELETE"],
-    })
-);
+app.use(cors());
 Mongoose.connect(process.env.MONGO)
     .then(() => {
         console.log("MongoDB is Connected".underline.blue);
