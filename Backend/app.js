@@ -33,12 +33,6 @@ app.use("/route/auth", authRoutes);
 app.use("/route/post", postRoutes);
 app.use("/route/comment", commentRoutes);
 
-// app.use(Express.static(path.join(__dirname, "/Frontend/dist")));
-
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "Frontend", "dist", "index.html"));
-// });
-
 app.use((err, req, res, next) => {
     const statusCode = err.statusCode || 500;
     const message = err.message || "Internal Server Error";
