@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "scripts": {
+ "scripts": {
+    "dev": "nodemon Backend/app.js",
+    "start": "node Backend/app.js",
+    "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend"
   },
   "keywords": [],
   "author": "Jaskaran Singh",
