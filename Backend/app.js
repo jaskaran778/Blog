@@ -12,7 +12,7 @@ const dotenv = require("dotenv").config({
 const app = Express();
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const PORT = process.env.PORT;
+const PORT = 774;
 app.use(Express.json());
 app.use(cookieParser());
 app.use(cors());
@@ -23,10 +23,6 @@ Mongoose.connect(process.env.MONGO)
     .catch((Error) => {
         console.log(`An Error has Occured : ${Error}`.red);
     });
-
-app.listen(PORT, () => {
-    console.log(`App is Listening to the PORT ${PORT}`.underline);
-});
 
 app.use("/route/user", userRoutes);
 app.use("/route/auth", authRoutes);
@@ -41,4 +37,11 @@ app.use((err, req, res, next) => {
         statusCode,
         message,
     });
+});
+app.get("/", (req, res) => {
+    res.send("Welcome to the root of the server!");
+});
+
+app.listen(PORT, () => {
+    console.log(`App is Listening to the PORT ${PORT}`.underline);
 });
