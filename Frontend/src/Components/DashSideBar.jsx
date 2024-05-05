@@ -66,7 +66,7 @@ export default function DashSidebar() {
                             Profile
                         </Sidebar.Item>
                     </Link>
-                    {currentUser.isAdmin && (
+                    {currentUser && (
                         <Link to="/dashboard?tab=posts">
                             <Sidebar.Item
                                 active={tab === "posts"}
@@ -88,6 +88,10 @@ export default function DashSidebar() {
                                     Users
                                 </Sidebar.Item>
                             </Link>
+                        </>
+                    )}
+                    {currentUser && (
+                        <>
                             <Link to="/dashboard?tab=comments">
                                 <Sidebar.Item
                                     active={tab === "comments"}

@@ -14,8 +14,11 @@ import UpdatePost from "./Pages/UpdatePost";
 import Post from "./Pages/Post";
 import ScrollToTop from "./Components/ScrollToTop";
 import Search from "./Pages/Search";
+import LocomotiveScroll from "locomotive-scroll";
+import AllPosts from "./Pages/AllPosts";
 
 function App() {
+    const locomotiveScroll = new LocomotiveScroll();
     return (
         <BrowserRouter>
             <ScrollToTop />
@@ -26,17 +29,14 @@ function App() {
                 <Route element={<PrivateRoute />}>
                     <Route path="/dashboard" element={<Dashboard />} />
                 </Route>
-                <Route element={<OnlyAdmin />}>
-                    <Route path="/create-post" element={<CreatePost />} />
-                    <Route
-                        path="/update-post/:postId"
-                        element={<UpdatePost />}
-                    />
-                </Route>
+                {/* <Route element={<OnlyAdmin />}> */}
+                <Route path="/create-post" element={<CreatePost />} />
+                <Route path="/update-post/:postId" element={<UpdatePost />} />
+                {/* </Route> */}
                 <Route path="/signin" element={<SignIn />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/search" element={<Search />} />
-                <Route path="/projects" element={<Projects />} />
+                <Route path="/posts" element={<AllPosts />} />
                 <Route path="/post/:postSlug" element={<Post />} />
             </Routes>
             <Foot />

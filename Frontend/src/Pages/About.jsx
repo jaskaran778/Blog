@@ -1,35 +1,43 @@
 export default function About() {
     return (
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="min-h-[92vh] flex items-center justify-center">
             <div className="max-w-2xl mx-auto p-3 text-center">
                 <div>
                     <h1 className="text-3xl font font-semibold text-center my-7">
-                        About Sahand' Blog
+                        About Blog
                     </h1>
                     <div className="text-md text-gray-500 flex flex-col gap-6">
                         <p>
-                            Welcome to Sahand's Blog! This blog was created by
-                            Sahand Ghavidel as a personal project to share his
-                            thoughts and ideas with the world. Sahand is a
-                            passionate developer who loves to write about
-                            technology, coding, and everything in between.
+                            <b>Welcome to My First Full-Stack Project!</b> Hello
+                            and welcome to my very first full-stack project! I'm
+                            thrilled to share with you a platform that I've
+                            brought to life using the MERN stack—MongoDB,
+                            Express.js, React, and Node.js. This combination of
+                            technologies has allowed me to create a dynamic,
+                            responsive, and interactive blog site where we can
+                            explore a variety of topics together.
                         </p>
 
                         <p>
-                            On this blog, you'll find weekly articles and
-                            tutorials on topics such as web development,
-                            software engineering, and programming languages.
-                            Sahand is always learning and exploring new
-                            technologies, so be sure to check back often for new
-                            content!
+                            <b> What You Can Expect </b> This blog will serve as
+                            a hub for sharing tutorials, insights, and
+                            discussions about the latest trends in technology,
+                            programming, and more. I plan to dive into topics
+                            that intrigue both seasoned developers and newcomers
+                            alike. Whether it's a deep dive into the best
+                            practices in web development or exploring new and
+                            emerging technologies, there's something here for
+                            everyone.
                         </p>
 
                         <p>
-                            We encourage you to leave comments on our posts and
-                            engage with other readers. You can like other
-                            people's comments and reply to them as well. We
-                            believe that a community of learners can help each
-                            other grow and improve.
+                            <b> Join the Journey </b>I encourage you to
+                            interact, share your thoughts, and even suggest
+                            topics you're interested in. This project is not
+                            just about showcasing what I have learned but also
+                            about growing as part of a community. Your feedback
+                            and contributions will help make this site even
+                            better.
                         </p>
                     </div>
                 </div>

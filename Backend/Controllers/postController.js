@@ -2,7 +2,7 @@ const { errorHandler } = require("../Utils/errorHandler");
 const Post = require("../Models/postModel");
 
 const create = async (req, res, next) => {
-    if (!req.user.isAdmin) {
+    if (!req.user) {
         return next(errorHandler(403, "You are not allowed to create a post"));
     }
     if (!req.body.title || !req.body.content) {
@@ -77,7 +77,7 @@ const getPosts = async (req, res, next) => {
 };
 
 const deletepost = async (req, res, next) => {
-    if (!req.user.isAdmin || req.user.id !== req.params.userId) {
+    if (!req.user || req.user.id !== req.params.userId) {
         return next(
             errorHandler(403, "You are not allowed to delete this post")
         );
@@ -91,7 +91,7 @@ const deletepost = async (req, res, next) => {
 };
 
 const updatepost = async (req, res, next) => {
-    if (!req.user.isAdmin || req.user.id !== req.params.userId) {
+    if (!req.user || req.user.id !== req.params.userId) {
         return next(
             errorHandler(403, "You are not allowed to update this post")
         );
